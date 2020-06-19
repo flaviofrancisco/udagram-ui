@@ -1,9 +1,9 @@
 FROM nginx as base
 
-COPY udagram-app.conf /etc/nginx/sites-available/udagram-app.conf
-
-RUN mkdir /etc/nginx/sites-enabled
-
-RUN ln -s /etc/nginx/sites-available/udagram-app.conf /etc/nginx/sites-enabled/udagram-app.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY ./www /usr/share/nginx/html
+
+EXPOSE 8100
+
+RUN service nginx configtest
