@@ -1955,7 +1955,7 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     appName: 'Udagram',
-    apiHost: 'http://udagram-reverse-proxy/api/v0'
+    apiHost: 'http://udagram-reverse-proxy:8080/api/v0'
 };
 /*
  * For easier debugging in development mode, you can import the following file
